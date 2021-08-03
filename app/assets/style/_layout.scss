@@ -1,286 +1,271 @@
-//*{
-    //outline: 1px solid blue;
-//}
-
-*, *::before, *::after{
-    box-sizing: border-box;
-}
-body {
-    font-family: $font-noto, $font-roboto,$font-family-all;
-    font-size: $font-size-1;
-    line-height: $line-height-1;
-}
+// * {
+//   outline: 1px solid blue;
+// }
 .container {
-    max-width: 1110px;
-    margin: 0 auto;
-    padding: 0 15px;
-    @include pad() {
-        max-width: 914px;
-    }
-    @include mobile() {
-        max-width: 737px;
-    }   
-}
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-a {
-    text-decoration: none;
-}
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include pad {
+    max-width: 914px;
+  }
+  @include mobile {
+    max-width: 737px;
+  } 
+}   
+
 .header {
-    font-size: $font-size-s;
-    line-height: $line-height-s;
-    background-color: $primary-light;
-    padding: 20px 88px;
+  background-color: $primary-light;
+  padding: $spacing*1.25 $spacing*5.5;
+  display: flex;
+  justify-content: space-between;
+  @include pad {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    padding-top: $spacing*0.625;
+    padding-left: 0px;
+    padding-right: 0px;
+    .nav-logo {
+      width: 48px;
+      margin-bottom: $spacing*0.625;
+    }
+  }
+  .menu {
     display: flex;
-    justify-content: space-between;
-    @include pad() {
-        padding-left: 39px;
-        padding-right: 39px;
-    }
+    justify-content: center;
     @include mobile() {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 10px;
-        .nav-logo{
-            width: 48px; 
-            margin-bottom: 10px;
-        }
+      flex-wrap: wrap;
+      width: 100%;
     }
-    .menu-bar {
-        display: flex;
-        justify-content: center;
-        @include mobile() {
-            flex-wrap: wrap;
-            width: 100%;
-            
-        }
-        .menu {
-            @include mobile() {
-                width: 50%;
-                text-align: center;                
-            }
-            
-        }
-        .menu-items, .menu-items-2 {
-            display: block;
-            color: $text-color-light;
-            padding: 10px 32px;
-            &:hover {
-                background: $secondary-light;
-                color: $primary;
-            }
-            @include mobile() {
-                padding: 8px 54px;
-                border: 1px solid $secondary-light;
-            }
-        }
-        .menu-items-2 {
-            @include mobile() {
-                padding: 8px 64px;
-                
-            }
-        }
-    }   
+    &-bar {
+      @include mobile() {
+        width: 49%;
+        text-align: center;
+      }
+    }
+    &-items,
+    &-items-2 {
+      display: block;
+      color: $text-color-light;
+      padding: $spacing*0.625 $spacing*2;
+      &:hover {
+        color: $primary;
+        background: $text-color-light;
+      }
+      @include mobile {
+        padding: $spacing*0.5 0px;
+        border: 1px solid $secondary-light;
+      }
+      @include small-phone {
+        padding: $spacing*0.5 0px;
+      }
+    }
+    &-items-2 {
+      @include mobile {
+        padding: $spacing*0.5 0px;
+      }
+      @include small-phone {
+        padding: $spacing*0.5 0px;
+      }
+    }
+  }
 }
 
 .footer {
-    color: $text-color-light;
-    background:  $primary-light;
-    padding-top: 44px;
-    @include pad() {
-        padding-top: 32px;
+  color: $text-color-light;
+  background: $primary-light;
+  padding-top: $spacing*2.75;
+  @include pad {
+    padding-top: $spacing*2;
+  }
+  @include mobile {
+    padding-top: $spacing*1.5;
+  }
+  &-link {
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+      display: none;
     }
-    @include mobile() {
-        padding-top: 24px;
+    .footer-menu {
+      display: flex;
+      align-items: center;
+      padding-top: $spacing*0.75;
+      margin-bottom: $spacing*2;
+      @include pad {
+        padding-top: $spacing*0.375;
+        margin-left: $spacing*0.5625;
+        margin-bottom: $spacing*1.125;
+      }
+      &-body1 {
+        margin-right: $spacing*3;
+        @include pad {
+          margin-right: $spacing*2.5;
+        }
+      }
+      &-items {
+        color: $text-color-light;
+        &:hover {
+          color: $primary;
+          background: $background-hover;
+        }
+      }
     }
-    .footer-link {
-        display: flex;
-        justify-content: space-between;
-        @include mobile() {
-            display: none;
+    .footer-sns {
+      display: flex;
+      &-icon1 {
+        margin-right: $spacing*2;
+        @include pad {
+          margin-right: $spacing*1.5;
+          margin-bottom: $spacing*1.5;
         }
-        .footer-menu {
-            display: flex;
-            align-items: center;
-            padding-top: 12px;
-            margin-bottom: 36px;
-            @include pad () {
-                padding-top: 6px;
-                margin-left: 9px;
-                margin-bottom: 18px;
-            }
-            .footer-menu-body1 {
-                margin-right: 48px;
-                @include pad() {
-                    margin-right: 40px;
-                }
-            }
-            .footer-menu-items {
-                color: $text-color-light;
-                &:hover {
-                    color: $primary;
-                    background: $secondary-light;
-                }
-            }
+      }
+      @include pad {
+        &-icon1,
+        &-icon2 {
+          width: 24px;
         }
-        .footer-sns {
-            display: flex;
-            .footer-sns-icon1 {
-                margin-right: 32px;
-                @include pad() {
-                    margin-right: 24px;
-                    margin-bottom: 24px;
-                }
-            }
-            @include pad() {
-                .footer-sns-icon1, .footer-sns-icon2 {
-                    width: 24px;
-                }
-            }
-        }
+      }
     }
-    .address-body {
-        display: flex;
-        justify-content: space-between;
-        .address1 {
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-            font-size: $font-size-6;
-            line-height: $line-height-10;
-            @include pad() {
-                margin-bottom: 12px;
-                font-size:$font-size-s;
-                line-height: $line-height-s;
-            }
-            @include mobile() {
-                margin-bottom: 6px;
-                font-size:$font-size-1;
-            }
-            .telto-icon {
-                padding: 6px;
-                margin-right: 22px;
-                @include pad() {
-                    width: 24px;
-                    padding: 3px;
-                    margin-right: 8px;
-                }
-                @include mobile() {
-                    width: 20px;
-                    padding: 2.5px;
-                    margin-right: 4px;
-                }
-            }
-            .telto {
-                color: $text-color-light;
-            }
+  }
+  .address-body {
+    display: flex;
+    justify-content: space-between;
+    .address1 {
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing*0.5;
+      @include pad {
+        margin-bottom: $spacing*0.75;
+        font-size: $fz-base*1.25;
+      }
+      @include mobile {
+        margin-bottom: $spacing*0.375;
+        font-size: $fz-base*1;
+        line-height: $lh-base*1.875;
+      }
+      .telto-icon {
+        padding: $spacing*0.375;
+        margin-right: $spacing*1.375;
+        @include pad {
+          width: 24px;
+          padding: 3px;
+          margin-right: $spacing*0.5;
         }
-        .sns-icon-mobile {
-            display: none;
-            @include mobile() {
-                display: flex;
-                align-items: center;
-                .sns-icon-mobile1, .sns-icon-mobile2 {
-                    width: 24px;
-                }
-                .sns-icon-mobile1 {
-                    margin-right: 24px;
-                }
-            }
+        @include mobile {
+          width: 20px;
+          padding: 2.5px;
+          margin-right: $spacing*0.25;
         }
+      }
+      .telto-number {
+        color: $text-color-light;
+      }
     }
-    .address2 {
+    .sns-icon-mobile {
+      display: none;
+      @include mobile {
         display: flex;
         align-items: center;
-        margin-bottom: 24px;
-        font-size: $font-size-6;
-        line-height: $line-height-10;
-        @include pad() {
-            margin-bottom: 20px;
-            font-size:$font-size-s;
-            line-height: $line-height-s;
+        &1,
+        &2 {
+          width: 24px;
         }
-        @include mobile() {
-            margin-bottom: 24px;
-            font-size:$font-size-1;
+        &1 {
+          margin-right: $spacing*1.5;
         }
-        .mailto-icon {
-            margin-right: 20px;
-            @include pad() {
-                width: 24px;
-                padding: 4px 2px;
-                margin-right: 8px;
-            }
-            @include mobile() {
-                width: 20px;
-                padding: 3.33px 1.67px;
-                margin-right: 5px;
-            }
-        }
-        .mailto {
-            color: $text-color-light;
-        }
+      }
     }
-    .footer-hr {
-        border-bottom: 1px solid $secondary-light;
-        margin-bottom: 33px;
-        @include pad() {
-            margin-bottom: 24px;
-        } 
-        @include mobile() {
-            margin-bottom: 16px;
-        }
+  }
+  .address2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing*1.5;
+    @include pad {
+      margin-bottom: $spacing*1.25;
+      font-size: $fz-base*1.25;
     }
-    .copyright {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 39px;
-        @include pad() {
-            padding-bottom: 21px;
-        }
-        @include mobile() {
-            flex-direction: column;
-            padding-bottom: 24px;
-        }
-        .copyright-slogan{
-            @include mobile(){
-                font-size: $font-size-2;
-                line-height: $line-height-2;
-                margin-bottom: 8px;
-            }
-        }
-        .copyright-link{
-            display: flex;
-            @include pad() {
-                margin-top: 12px;
-            }
-            @include mobile() {
-                flex-direction: column;
-                margin-top: 0;
-            }
-            .copyright-link-body {
-                @include mobile() {
-                    margin-bottom: 8px;
-                }
-            }
-            .copyright-items1, .copyright-items2 {
-                font-size: $font-size-2;
-                line-height: $line-height-2;
-                color: $text-color-light;
-            }
-            .copyright-items1 {
-                margin-right: 48px;
-                @include pad() {
-                    margin-right: 24px;
-                }
-            }
-        }
+    @include mobile {
+      margin-bottom: $spacing*1.5;
+      font-size: $fz-base*1;
+      line-height: $lh-base*1.875;
     }
+    .mailto-icon {
+      margin-right: $spacing*1.25;
+      @include pad {
+        width: 24px;
+        padding: $spacing*0.25 $spacing*0.125;
+        margin-right: $spacing*0.5;
+      }
+      @include mobile {
+        width: 20px;
+        padding: 3.33px 1.67px;
+        margin-right: $spacing*0.3125;
+      }
+    }
+    .mailto-address {
+      color: $text-color-light;
+    }
+  }
+  &-hr {
+    border-bottom: 1px solid $secondary-light;
+    margin-bottom: $spacing*2.0625;
+    @include pad {
+      margin-bottom: $spacing*1.5;
+    }
+    @include mobile {
+      margin-bottom: $spacing*1;
+    }
+  }
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: $spacing*2.4375;
+    @include pad {
+      padding-bottom: $spacing*1.3125;
+    }
+    @include mobile {
+      flex-direction: column;
+      padding-bottom: $spacing*1.5;
+    }
+    &-slogan {
+      @include mobile {
+        font-size: $fz-base*0.875;
+        margin-bottom: $spacing*0.5;
+      }
+    }
+    &-link {
+      display: flex;
+      
+      @include pad {
+        margin-top: $spacing*0.75;
+      }
+      @include mobile {
+        flex-direction: column;
+        margin-top: 0;
+      }
+      &-body {
+        @include mobile {
+          margin-bottom: $spacing*0.5;
+        }
+      }
+      .copyright-items1,
+      .copyright-items2 {
+        color: $text-color-light;
+        &:hover {
+          color: $text-color-hover;
+          background: $background-hover;
+        }
+      }
+      .copyright-items1 {
+        margin-right: $spacing*3;
+        @include pad {
+          margin-right: $spacing*1.5;
+        }
+      }
+    }
+  }
 }
-
-
-
-
