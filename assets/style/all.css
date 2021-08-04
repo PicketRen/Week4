@@ -63,6 +63,23 @@ a {
   display: block;
   text-decoration: none; }
 
+.d-fx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.text-color-light {
+  color: #fff; }
+
+.fw-bold {
+  font-weight: 700; }
+
+.fw-black {
+  font-weight: 900; }
+
+.fs-italic {
+  font-style: italic; }
+
 .fz-1 {
   font-size: 1rem; }
 
@@ -106,15 +123,15 @@ a {
   font-size: 1.1875rem; }
 
 .container {
-  max-width: 1110px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px; }
   @media (max-width: 992px) {
     .container {
-      max-width: 914px; } }
+      max-width: 934px; } }
   @media (max-width: 768px) {
     .container {
-      max-width: 737px; } }
+      max-width: 767px; } }
 
 .header {
   background-color: #AA0601;
@@ -138,9 +155,7 @@ a {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding-top: 0.625rem;
-      padding-left: 0px;
-      padding-right: 0px; }
+      padding: 0.625rem 0px 0px 0px; }
       .header .nav-logo {
         width: 48px;
         margin-bottom: 0.625rem; } }
@@ -171,13 +186,13 @@ a {
         .header .menu-items, .header .menu-items-2 {
           padding: 0.5rem 0px;
           border: 1px solid #fff; } }
-      @media (max-width: 460px) {
+      @media (max-width: 470px) {
         .header .menu-items, .header .menu-items-2 {
           padding: 0.5rem 0px; } }
     @media (max-width: 768px) {
       .header .menu-items-2 {
         padding: 0.5rem 0px; } }
-    @media (max-width: 460px) {
+    @media (max-width: 470px) {
       .header .menu-items-2 {
         padding: 0.5rem 0px; } }
 
@@ -382,5 +397,236 @@ a {
         @media (max-width: 992px) {
           .footer .copyright-link .copyright-items1 {
             margin-right: 1.5rem; } }
+
+* {
+  outline: 1px solid blue; }
+
+.banner {
+  height: 840px;
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true");
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+  @media (max-width: 992px) {
+    .banner {
+      background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-sm.png?raw=true"); } }
+  @media (max-width: 768px) {
+    .banner {
+      height: 394px; } }
+  .banner-slogan {
+    color: #650300;
+    text-align: right;
+    position: absolute;
+    top: 348px;
+    right: 20px; }
+    @media (max-width: 992px) {
+      .banner-slogan {
+        top: 372px;
+        right: 35px; }
+        .banner-slogan .banner-intro {
+          font-size: 1.25rem; }
+        .banner-slogan .banner-text {
+          font-size: 3rem; } }
+    @media (max-width: 768px) {
+      .banner-slogan {
+        top: 164px;
+        right: 15px; }
+        .banner-slogan .banner-intro {
+          font-size: 1rem;
+          line-height: 1.25rem; }
+        .banner-slogan .banner-text {
+          font-size: 2rem;
+          line-height: 4.5rem; } }
+
+.index-subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #650300;
+  text-align: center; }
+  @media (max-width: 992px) {
+    .index-subtitle {
+      font-size: 2rem;
+      margin-bottom: 2rem; } }
+  @media (max-width: 768px) {
+    .index-subtitle {
+      font-size: 1.5rem;
+      line-height: 3rem; } }
+
+.about {
+  padding-top: 3.75rem;
+  padding-bottom: 5rem;
+  background-color: #AA06010D; }
+  @media (max-width: 992px) {
+    .about {
+      padding-top: 2.5rem;
+      padding-bottom: 3.5rem; } }
+  @media (max-width: 768px) {
+    .about {
+      padding-top: 2rem;
+      padding-bottom: 2.5rem; } }
+  .about-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 100%; }
+    @media (max-width: 992px) {
+      .about-body {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }
+  .about-items1, .about-items2, .about-items3, .about-items4 {
+    max-width: 23%;
+    margin: 0 auto; }
+  @media (max-width: 992px) {
+    .about-items1, .about-items2 {
+      max-width: 255px;
+      margin-left: 3.35rem;
+      margin-right: 3.35rem;
+      margin-bottom: 2rem; } }
+  @media (max-width: 992px) {
+    .about-items3, .about-items4 {
+      max-width: 255px;
+      margin-left: 3.35rem;
+      margin-right: 3.35rem; } }
+  @media (max-width: 768px) {
+    .about-items1, .about-items2, .about-items3 {
+      max-width: 255px;
+      margin-left: 3.8rem;
+      margin-right: 3.8rem;
+      margin-bottom: 2rem; } }
+  .about-icon {
+    width: 100px;
+    padding: 8.08px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 1rem; }
+  .about-title {
+    font-size: 1.5rem;
+    color: #650300;
+    text-align: center;
+    margin-bottom: 0.5rem; }
+
+.classic-glass {
+  padding-top: 3.75rem;
+  padding-bottom: 5rem; }
+  @media (max-width: 992px) {
+    .classic-glass {
+      padding-top: 2.5rem;
+      padding-bottom: 3.5rem; } }
+  @media (max-width: 768px) {
+    .classic-glass {
+      padding-top: 2rem;
+      padding-bottom: 2.5rem;
+      max-width: 100%;
+      margin: 0 auto; } }
+  .classic-glass-body1, .classic-glass-body2, .classic-glass-body3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #AA0601;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative; }
+  .classic-glass-body1, .classic-glass-body2 {
+    margin-bottom: 2rem; }
+    @media (max-width: 992px) {
+      .classic-glass-body1, .classic-glass-body2 {
+        margin-bottom: 0.5rem; } }
+  .classic-glass-items1, .classic-glass-items2, .classic-glass-items3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    height: auto; }
+    @media (max-width: 768px) {
+      .classic-glass-items1, .classic-glass-items2, .classic-glass-items3 {
+        position: absolute; } }
+  .classic-glass-img, .classic-glass-img2 {
+    max-width: 58%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover; }
+    @media (max-width: 992px) {
+      .classic-glass-img, .classic-glass-img2 {
+        max-width: 52%; } }
+    @media (max-width: 768px) {
+      .classic-glass-img, .classic-glass-img2 {
+        max-width: 100%; } }
+  .classic-glass-img2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+    @media (max-width: 992px) {
+      .classic-glass-img2 {
+        -webkit-box-ordinal-group: -1;
+            -ms-flex-order: -2;
+                order: -2; } }
+  .classic-glass .material-icons {
+    -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+            transform: scale(2);
+    margin-left: 2.8125rem;
+    margin-right: 1.5rem; }
+    @media (max-width: 992px) {
+      .classic-glass .material-icons {
+        -webkit-transform: scale(1.67);
+            -ms-transform: scale(1.67);
+                transform: scale(1.67);
+        margin-left: 2.45rem;
+        margin-right: 1rem; } }
+  .classic-glass-icon3 {
+    width: 48px;
+    height: 48px;
+    margin-left: 1.875rem;
+    margin-right: 0.5rem; }
+    @media (max-width: 992px) {
+      .classic-glass-icon3 {
+        width: 40px;
+        height: 40px;
+        margin-left: 1.875rem;
+        margin-right: 0.5rem; } }
+  @media (max-width: 992px) {
+    .classic-glass-icon2 {
+      width: 40px;
+      height: 40px;
+      margin-left: 1.875rem;
+      margin-right: 0.5rem; } }
+  .classic-glass-title1, .classic-glass-title2, .classic-glass-title3 {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 900; }
+    @media (max-width: 992px) {
+      .classic-glass-title1, .classic-glass-title2, .classic-glass-title3 {
+        font-size: 1.75rem;
+        line-height: 4rem; } }
+  .classic-glass-title2 {
+    margin-left: 0.625rem;
+    margin-right: 1.875rem; }
+    @media (max-width: 992px) {
+      .classic-glass-title2 {
+        margin-left: 0rem;
+        margin-right: 0rem; } }
+
+.cobranded-glass {
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true");
+  background-size: cover;
+  background-position: center center;
+  padding-top: 3.75rem;
+  padding-bottom: 5rem; }
+  .cobranded-glass-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 /*# sourceMappingURL=all.css.map */
