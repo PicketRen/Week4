@@ -1,0 +1,76 @@
+---
+title: 門市據點 - OO眼鏡
+layout: ./app/layout.ejs
+engine: ejs
+current: location-2
+---
+
+<div class="location-2 container">
+  <h1>門市據點</h1>
+  <div class="location-2-area">
+    <label class="location-2-area-choose" for="location-2-area-choose"
+      >選擇分店</label
+    >
+    <select
+      class="location-2-area-tp"
+      name="location-2-area-tp"
+      id="location-2-area-tp"
+      size="1"
+    >
+      <option value="台北中山旗艦店" selected>台北中山旗艦店</option>
+      <option value="台北復興旗艦店">台北復興旗艦店</option>
+      <option value="台北博愛旗艦店">台北博愛旗艦店</option>
+    </select>
+  </div>
+  <div class="location-2-body">
+    <div class="location-2-item pc-mr-1 pad-mb-2">
+      <div class="location-2-item1 pad-mr-1">
+        <img
+          src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week4/locate1.jpeg?raw=true"
+          alt="location-2"
+          class="location-2-img"
+        />
+      </div>
+      <div class="location-2-item2">
+        <p class="location-2-store">台北中山旗艦店</p>
+        <ul class="location-2-card">
+          <li class="location-2-info1">
+            <img
+              src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/8d1ef3b63951b7f749edd130ff66e4d4856a3df2/week4/icon-phone-black.svg"
+              alt=""
+              class="location-2-icon"
+            />
+            <p>電話：(02)000-1234</p>
+          </li>
+          <li class="location-2-info1">
+            <img
+              src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/8d1ef3b63951b7f749edd130ff66e4d4856a3df2/week4/icon-clock-black.svg"
+              alt=""
+              class="location-2-icon"
+            />
+            <p>營業時間：10:00-21:00</p>
+          </li>
+          <li class="location-2-info2">
+            <img
+              src="/assets/images/place_black_24dp.svg"
+              alt=""
+              class="location-2-icon"
+            />
+            <p>地址：台北市中山區南京東路</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="location-2-map">
+      <iframe
+        class="location-2-mapbox"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14457.49933167227!2d121.52717380950926!3d25.055281683157915!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a966f6fc092d%3A0x9f740ea896779b57!2zMTA0OTHlj7DngaPlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuozmrrUyNeiZnw!5e0!3m2!1szh-TW!2sus!4v1628961577508!5m2!1szh-TW!2sus"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+.faq {
+  padding-top: $spacing * 6;
+  padding-bottom: $spacing * 10;
+  @include pad {
+    padding-top: $spacing * 3.75;
+    padding-bottom: $spacing * 6;
+  }
+  @include mobile {
+    padding-top: $spacing * 2.25;
+    padding-bottom: $spacing * 3.5;
+  }
+  &-title {
+    font-size: $fz-base * 3;
+    line-height: $spacing * 5;
+    font-weight: 700;
+    border-left: 8px solid #9f1213;
+    padding-left: $spacing * 1;
+    margin-bottom: $spacing * 3.75;
+    @include pad {
+        margin-bottom: $spacing*2.5;
+        border-left: 4px solid #9f1213;
+    }
+    @include mobile {
+        font-size: $fz-base*1.75;
+        padding-left: $spacing * 0.5;
+        margin-bottom: $spacing * 1.5;
+    }
+  }
+  &-subtitle {
+      font-size: $fz-base*2;
+      line-height: 63px;
+      font-weight: 700;
+      margin-bottom: $spacing*2.25;
+      @include pad {
+          margin-bottom: $spacing*2;
+      }
+      @include mobile {
+          font-size: $fz-base*1.25;
+          line-height: 63px;
+          font-weight: 300;
+          margin-bottom: $spacing*1.5;
+      }
+  }
+  &-question {
+      font-size: $fz-base*1.25;
+      line-height: 23px;
+      font-weight: 700;
+      margin-bottom: $spacing*1;
+      @include mobile {
+          font-size: $fz-base*1;
+          margin-bottom: $spacing*0.5;
+      }
+  }
+  &-answer {
+      padding-left: 95px;
+      margin-bottom: $spacing*2;
+      @include pad {
+        padding-left: $spacing*3.75;
+          margin-bottom: $spacing*1.5;
+      }
+      @include mobile {
+        font-size: $fz-base*0.875; 
+        padding-left: $spacing*0;
+        margin-bottom: $spacing*1.25;
+      }
+  }
+  &-answer2 {
+    padding-left: 95px;
+    margin-bottom: $spacing*0;
+    @include pad {
+        padding-left: $spacing*3.75;
+      }
+    @include mobile {
+      font-size: $fz-base*0.875; 
+      padding-left: $spacing*0;
+    }
+}
+}

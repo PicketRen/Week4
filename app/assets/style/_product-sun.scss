@@ -1,0 +1,294 @@
+.production-bar-sun {
+    &-list {
+      display: flex;
+      justify-content: center;
+    }
+    &-body1,
+    &-body2,
+    &-body3 {
+      width: 33.3%;
+      border-bottom: 8px solid transparent;
+      border-left: 1px solid #dcdcdc;
+      border-right: 1px solid #dcdcdc;
+      padding-top: 24px;
+      padding-bottom: 16px;
+      @include pad {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+      @include mobile {
+        padding-top: 6px;
+        padding-bottom: 1px;
+        border-bottom: 4px solid transparent;
+      }
+    }
+    &-body2 {
+      border-bottom: 8px solid $primary-light;
+      @include mobile {
+        border-bottom: 4px solid $primary-light;
+      }
+    }
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $text-color-general;
+      width: 100%;
+      height: auto;
+    }
+  
+    .material-icons {
+      font-size: 44px;
+      margin-right: 10px;
+      @include pad {
+        font-size: 32px;
+        margin-right: 8px;
+        margin-bottom: 0px;
+      }
+      @include mobile {
+        font-size: 16px;
+        margin-right: 2px;
+      }
+    }
+    &-icon2 {
+      width: 44px;
+      height: 44px;
+      padding: 2px;
+      margin-right: 10px;
+      @include pad {
+        width: 32px;
+        height: 32px;
+        padding: 1.33px;
+        margin-right: 8px;
+      }
+      @include mobile {
+        width: 16px;
+        height: 16px;
+        padding: 1.34px;
+        margin-right: 2px;
+      }
+    }
+    &-icon3 {
+      width: 48px;
+      height: 48px;
+      padding: 4px 0px;
+      margin-right: 7px;
+      @include pad {
+        width: 32px;
+        height: 32px;
+        padding: 2.67px 0px;
+        margin-right: 8px;
+      }
+      @include mobile {
+        width: 16px;
+        height: 16px;
+        padding: 1.33px 0px;
+        margin-right: 2px;
+      }
+    }
+    &-title {
+      font-size: $fz-base * 2;
+      font-weight: 500;
+      @include pad {
+        font-size: $fz-base * 1.5;
+      }
+      @include mobile {
+        font-size: $fz-base * 0.875;
+        line-height: $fz-base  * 0.875 ;
+      }
+    }
+    &-hover-box {
+      display: none;
+    }
+  }
+  
+  // banner
+  .production-banner-sun {
+    display: flex;
+    margin-bottom: $spacing * 5;
+    @include pad {
+      margin-bottom: $spacing*3.5;
+    }
+    @include mobile {
+      margin-bottom: $spacing*2;
+    }
+    &-items {
+      flex: 0 0 50%;
+    }
+    &-pic1, &-pic2 {
+      width: 100%;
+      height: 304px;
+      object-fit: cover;
+      @include mobile {
+        height: 148px;
+      }
+    }
+    }
+  
+  // title + subtitle
+  .production-sun-title {
+    font-size: $fz-base * 2.625;
+    font-weight: 500;
+    text-align: center;
+    @include pad {
+      font-size: $fz-base * 2;
+    }
+    @include mobile {
+      font-size: $fz-base * 1.25;
+      line-height: $spacing*3;
+    }
+  }
+  .production-sun-subtitle {
+    font-size: $fz-base * 2;
+    text-align: center;
+    margin-bottom: $spacing * 2.5;
+    @include pad {
+      font-size: $fz-base * 1.5;
+      margin-bottom: $spacing * 2;
+    }
+    @include mobile {
+      font-size: $fz-base * 1;
+      line-height: $spacing*2.25;
+      margin-bottom: $spacing * 1.25;
+    }
+  
+  }
+  
+  // production-list
+  .production-sun {
+    &-body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include mobile {
+        display: block;
+        max-width: 345px;
+        margin: 0 auto;
+      }
+    }
+    &-card {
+      max-width: 31%;
+      @include pad {
+        max-width: 50%;
+      }
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+    &-pics {
+      width: 350px;
+      height: 224px;
+      object-fit: cover;
+      @include pad{
+        width: 330px;
+        height: 164px;
+      }
+      @include mobile {
+        width: 345px;
+        height: 166px;
+      }
+    }
+    &-text {
+      display: flex;
+      justify-content: space-between;
+      font-size: $fz-base * 1.5;
+      @include PC-1110 {
+        font-size: $fz-base * 1.25;
+      }
+    }
+    &-price {
+      font-weight: 500;
+      color: $text-color-bright;
+    }
+    &-color, &-colorA, &-colorAB, &-colorB {
+      display: flex;
+      &1 {
+        width: 24px;
+        height: 24px;
+        background: #5f3e2d;
+        border-radius: 4px;
+        margin-right: $spacing * 0.5;
+      }
+      &2 {
+        width: 24px;
+        height: 24px;
+        background: #b75929;
+        border-radius: 4px;
+      }
+    }
+    &-color{
+      margin-bottom: $spacing * 6.5;
+      @include pad {
+        margin-bottom: $spacing * 4.5;
+      }
+      @include mobile {
+        margin-bottom: $spacing * 2;
+      }
+    }
+    &-colorA{
+      margin-bottom: $spacing*10;
+      @include pad {
+        margin-bottom: $spacing * 4.5;
+      }
+    }
+    &-colorAB{
+      margin-bottom: $spacing * 10;
+      @include pad {
+        margin-bottom: $spacing * 6;
+      }
+    }
+    &-colorB{
+      margin-bottom: $spacing * 10;
+      @include pad {
+        margin-bottom: $spacing * 6;
+      }
+      @include mobile {
+        margin-bottom: $spacing*2.5;
+      }
+    }
+
+  }
+  .mobile-dp-n {
+    @include mobile {
+      display: none;
+    }
+  }
+  
+  // link to pages bar
+  .sun-link-pages {
+    display: none;
+    @include mobile {
+      display: block;
+      &-body {
+        display: flex;
+        justify-content: center;
+        font-size: $fz-base*1;
+        margin-bottom: $spacing * 3.5;
+        }
+      &-to111,
+      &-to112,
+      &-to21 {
+        color: $text-color-heavy2;
+      }
+      &-to111,
+      &-to112 {
+        padding: 10px 11px 11px 11px;
+        font-size: 17px;
+        line-height: 26px;
+      border: 1px solid #555555;
+      }
+      &-to112 {
+        background: $background-light2;
+      }
+      &-to21,
+      &-to22 {
+        padding: 12px 14px;
+      border: 1px solid #555555;
+      }
+      &-to22 {
+        background: $background-dark2;
+        color: $text-color-light;
+      }
+    }
+  }
+  
